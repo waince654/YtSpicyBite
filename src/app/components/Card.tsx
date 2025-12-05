@@ -1,10 +1,24 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-const Card = ({ menu }) => {
+// Props type define karo
+interface MenuItem {
+  id: number;
+  pizza: string | StaticImageData; // Agar public folder me hai to string, agar assets import to StaticImageData
+  name: string;
+  desc: string;
+  rating?: number;
+}
+
+interface CardProps {
+  menu: MenuItem;
+}
+
+const Card: React.FC<CardProps> = ({ menu }) => {
   return (
     <div className="rounded-lg flex flex-col items-center space-y-4 py-4 px-6 bg-orange-50 shadow-orange-500 shadow-md border border-red-500">
+      
       <Image 
         src={menu.pizza} 
         alt={menu.name} 
