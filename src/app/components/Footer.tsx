@@ -1,9 +1,7 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
-import facebook from "../assets/facebook.png";
-import instagram from "../assets/instagram.png";
-import twitter from "../assets/twitter.png";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
@@ -54,9 +52,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-red-500">Follow Us</h3>
             <div className="flex space-x-4">
-              <Image src={facebook} alt="Facebook" width={24} height={24} />
-              <Image src={instagram} alt="Instagram" width={24} height={24} />
-              <Image src={twitter} alt="Twitter" width={24} height={24} />
+              <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
+              <Image src="/instagram.png" alt="Instagram" width={24} height={24} />
+              <Image src="/twitter.png" alt="Twitter" width={24} height={24} />
             </div>
           </div>
         </div>

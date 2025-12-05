@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "lucide-react";
-import chili from "../assets/chili-pepper.png";
 
 function Header() {
   const [header, setHeader] = useState(false);
@@ -14,9 +13,7 @@ function Header() {
     const handleScroll = () => {
       window.scrollY > 50 ? setHeader(true) : setHeader(false);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,7 +27,7 @@ function Header() {
         {/* Mobile Nav */}
         <div className="flex md:hidden justify-between px-4">
           <div className="flex items-center gap-1">
-            <Image src={chili} width={30} height={30} alt="chilli" />
+            <Image src="/chili-pepper.png" width={30} height={30} alt="chilli" />
             <h1 className="text-xl font-bold text-red-500">
               Spicy <span className="text-gray-800 font-semibold">Bites</span>
             </h1>
@@ -63,7 +60,7 @@ function Header() {
         {/* Desktop Nav */}
         <div className="hidden md:flex justify-between items-center px-10">
           <div className="flex items-center gap-1 font-semibold text-primary">
-            <Image src={chili} width={40} height={40} alt="chilli" />
+            <Image src="/chili-pepper.png" width={40} height={40} alt="chilli" />
             <div className="text-xl font-bold text-red-500">
               Spicy <span className="text-gray-800 font-semibold">Bites</span>
             </div>
