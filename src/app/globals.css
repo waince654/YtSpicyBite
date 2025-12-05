@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}
